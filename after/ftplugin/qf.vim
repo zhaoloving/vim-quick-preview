@@ -34,8 +34,9 @@ function! VimQicPrevEnterSignalCB()
 endfunction
 
 if g:vim_quick_preview_default_keymaps == 1
-    nnoremap <silent> <buffer> <SPACE> :call VimQicPrevCurrentItem()<CR>
-    nnoremap <silent> <buffer> <CR>    :call VimQicPrevEnterSignalCB()<CR><CR> \| :cclose<CR> \| :lclose<CR>
+    nnoremap <silent> <buffer> ,<Space> :call VimQicPrevCurrentItem()<CR>
+    nnoremap <silent> <buffer> <Leader><Cr>    :call VimQicPrevEnterSignalCB()<CR><CR> \| :cclose<CR> \| :lclose<CR>
+    " nnoremap <silent> <buffer> <Leader>q    :call :cclose<CR> \| :lclose<CR>
 endif
 
 " update quickfix list items everytime quickfix list get opened.
